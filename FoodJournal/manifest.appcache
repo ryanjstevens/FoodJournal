@@ -1,0 +1,27 @@
+﻿CACHE MANIFEST
+# version 1
+
+CACHE:
+/index.html
+
+/Content/bootstrap.min.css
+/Content/font-awesome.css
+/Content/site.min.css
+/Content/kendo/styles/kendo.common.min.css
+/Content/kendo/styles/kendo.bootstrap.min.css
+
+/Scripts/jquery-3.3.1.min.js
+/Scripts/bootstrap.min.js
+/Content/kendo/js/kendo.all.min.js
+
+/Scripts/App/application.js
+/Scripts/App/utilities.js
+/Scripts/App/data.js
+/Scripts/site.js
+
+
+FALLBACK:
+
+
+NETWORK:
+*

@@ -1,0 +1,11 @@
+{
+    "extends": "tslint:latest",
+    "linterOptions": {
+        "exclude": [
+            "bin",
+            "**/__test__",
+            "lib/*generated.js",
+            "node_modules"
+        ]
+    }
+}

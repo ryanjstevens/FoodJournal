@@ -1,0 +1,111 @@
+﻿.lead-preview-menu {
+    display: inline;
+    padding: 0 10px;
+}
+
+.sort-indicators {
+    padding: 10px;
+    position: absolute;
+}
+
+.sort-indicators i {
+    display: block;
+}
+
+.questions-list {
+    margin: 15px;
+}
+
+.question {
+    margin: 5px;
+    padding: 5px;
+    /*background-color: #ccc;*/
+    border: 1px solid #FDB81C;
+    border-radius: 4px;
+    cursor: move;
+
+    .question-detail {
+        margin: 10px 35px;
+    }
+
+    .question-text {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0 0 10px;
+        cursor: pointer;
+    }
+
+    .question-condition {
+        display: none;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 16px;
+        margin: 0 0 10px;
+        cursor: pointer;
+
+        i {
+            opacity: 0;
+        }
+
+        .question-condition-content {
+            display: inline;
+            padding: 4px;
+            min-height: 35px;
+            min-width: 200px;
+        }
+
+        &.new-condition {
+            .question-condition-content {
+                display: inline-block;
+            }
+        }
+
+        .suggestions {
+            display: inline-block;
+            margin-left: 15px;
+            font-style: italic;
+            color: gray;
+            border-radius: 4px;
+            padding: 3px;
+            border: 1px solid #d8bb31;
+
+            &.error {
+                color: white;
+                background-color: red;
+                border-radius: 4px;
+                padding: 3px;
+            }
+        }
+
+        &.active {
+            background-color: transparent;
+            font-weight: bold;
+
+            i {
+                opacity: 1;
+            }
+        }
+    }
+
+    .question-preview {
+        border-top: 1px solid #111;
+        padding: 5px 0;
+    }
+
+    &.active {
+        background-color: #FDD068;
+
+        .question-condition {
+            display: block;
+        }
+
+
+        &.dragging {
+            opacity: .3;
+        }
+    }
+
+    &.drop-target {
+        border: #3D2D07;
+    }
+}

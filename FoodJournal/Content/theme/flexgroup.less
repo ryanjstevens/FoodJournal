@@ -1,0 +1,89 @@
+﻿.flex-group {
+    margin-bottom: 25px;
+
+    .flex-header {
+        position: relative;
+        border: 1px solid #dcdcdc;
+        border-left: 5px solid gold;
+
+        .flex-title {
+            font-weight: bold;
+            font-style: normal;
+            text-transform: uppercase;
+            text-overflow: ellipsis;
+            margin-right: 40px;
+            margin: 8px 85px 8px 14px;
+
+            &:only-child {
+                margin: 8px 8px 8px 14px;
+            }
+        }
+
+
+        .flex-nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            .flex-nav-previous, .flex-nav-next {
+                display: inline-block;
+                border-left: 1px solid #dcdcdc;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                font-size: 24px;
+                color: #a7a7a7;
+            }
+
+            .flex-nav-previous:after {
+                content: '<';
+            }
+
+            .flex-nav-next:after {
+                content: '>';
+            }
+
+            .flex-nav-previous.enabled,
+            .flex-nav-next.enabled {
+                color: #6eaefd;
+            }
+        }
+    }
+
+    .flex-content-container {
+        overflow: hidden;
+        position: relative;
+        /*height: 192px;*/
+        .flex-content {
+            position: absolute;
+            /*height: 192px;*/
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: stretch;
+            /*left: -539px;*/
+            left: 0;
+            transition: left 1s;
+
+            .flex-page {
+                /*width: 539px;*/
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.progress {
+    background-color: #fff;
+    height: 15px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.progress-bar {
+    background-color: gold;
+    background: -webkit-linear-gradient(180deg, rgba(255, 204, 0, 1) 0%, rgba(245, 154, 35, 1) 100%);
+    background: -moz-linear-gradient(270deg, rgba(255, 204, 0, 1) 0%, rgba(245, 154, 35, 1) 100%);
+    background: linear-gradient(270deg, rgba(255, 204, 0, 1) 0%, rgba(245, 154, 35, 1) 100%);
+}

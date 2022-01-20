@@ -1,0 +1,293 @@
+﻿
+@{
+    ViewBag.Title = "Food Journal";
+}
+
+<h2>Food Journal</h2>
+
+<div id="display"></div>
+
+
+@section scripts{
+
+    <script type="text/x-kendo-template" id="field-measure-template">
+        @*<div id="#=id#" class="field measure">*@
+        <div>
+            <label name="#=id#_value">#=label#</label>
+            #if(readonly) { #
+            <div><span class="measure-amount">#=amount#</span> <span class="measure-units">#=units#</span></div>
+            # } else { #
+            <div>
+                <input name="#=id#_value" type="number" step="0.01" value="#=amount#" />
+                <select name="#=id#_unit">
+                    # for(let i=0; i < options.length; i++){ #
+                    <option value="#=options[i].value#" #=options[i].selected#>#=options[i].label#</option>
+                    # } #
+                </select>
+            </div>
+            # } #
+        </div>
+        @*</div>*@
+    </script>
+    <script type="text/x-kendo-template" id="field-stringinput-template">
+        @*<div id="#=id#" class="field stringinput">*@
+        <div>
+            <label name="#=id#_value">#=label#</label>
+            #if(readonly) { #
+            <div><span class="measure-amount">#=value#</span></div>
+            # } else { #
+            <div>
+                <input name="#=id#_value" type="text" value="#=value#" />
+            </div>
+            # } #
+        </div>
+        @*</div>*@
+    </script>
+    <script type="text/x-kendo-template" id="field-numericalinput-template">
+    @*<div id="#=id#" class="field stringinput">*@
+    <div>
+        <label name="#=id#_value">#=label#</label>
+        #if(readonly) { #
+        <div><span class="measure-amount">#=value#</span></div>
+        # } else { #
+        <div>
+            <input name="#=id#_value" type="number" step="0.01" value="#=value#" />
+        </div>
+        # } #
+    </div>
+    @*</div>*@
+</script>
+    <script type="text/x-kendo-template" id="field-selectinput-template">
+        @*<div id="#=id#" class="field selectinput">*@
+        <div>
+            <label name="#=id#_value">#=label#</label>
+            <div>
+                <select name="#=id#_value">
+                    # for(let i=0; i < options.length; i++){ #
+                    <option value="#=options[i].value#">#=options[i].label#</option>
+                    # } #
+                </select>
+            </div>
+        </div>
+        @*</div>*@
+
+    </script>
+    <script type="text/x-kendo-template" id="itemlist-template">
+        @*<div id="#=id#" class="item-list">*@
+        <label name="#=id#">#=label#</label>
+        <div>
+            <div id="#=id#_list"></div>
+        </div>
+        @*</div>*@
+    </script>
+    <script type="text/x-kendo-template" id="itemlist-item-template">
+        <div id="#=id#" class="itemlist-item">
+            <img src="#=imageSrc#" />
+            <h3>#=name#</h3>
+            <p>#=description#</p>
+        </div>
+    </script>
+
+    <script type="text/x-kendo-template" id="ingredient-template">
+        @*<div id="#=id#" class="form-group ingredient">*@
+        #if(readonly || dependantControl) { #
+        <div id="#=id#_name"></div>
+        <div id="#=id#_servingsize"></div>
+        # } else { #
+        <h3>Ingredient</h3>
+        <div>
+            <button id="#=id#_save_btn" type="button" class="k-button k-button-primary" title="Save"><i class="fa fa-save"></i> Save</button>
+            <button id="#=id#_remove_btn" type="button" class="k-button k-button-danger" title="Remove"><i class="fa fa-remove"></i> Remove</button>
+        </div>
+        <div id="#=id#_name"></div>
+        <div id="#=id#_servingsize"></div>
+
+        <h3 class="sectionBanner">Nutrition</h3>
+        <div id="#=id#_nutrition"></div>
+        # } #
+        @*</div>*@
+    </script>
+
+    <script type="text/x-kendo-template" id="ingredients-template">
+        <ul>
+            <li><a href="\\#ingredient">Create New Ingredient</a></li>
+            # for(var i = 0; i < ingredients.length; i++) { #
+            <li><a href="\\#ingredient!#=ingredients[i].id#">#=ingredients[i].name#</a></li>
+            # } #
+        </ul>
+    </script>
+
+    <script type="text/x-kendo-template" id="nutrition-template">
+        @*<div id="#=id#" class="form-group nutrition">*@
+        <div id="#=id#_calories" class="nutrition-section"></div>
+        <div id="#=id#_totalfat" class="nutrition-section"></div>
+        <div id="#=id#_saturatedfat"></div>
+        <div id="#=id#_transfat"></div>
+        <div id="#=id#_cholesterol" class="nutrition-section"></div>
+        <div id="#=id#_sodium" class="nutrition-section"></div>
+        <div id="#=id#_totalcarbohydrates" class="nutrition-section"></div>
+        <div id="#=id#_dietaryfiber"></div>
+        <div id="#=id#_carbohydrates"></div>
+        <div id="#=id#_sugar"></div>
+        <div id="#=id#_sugaralcohol"></div>
+        <div id="#=id#_protein" class="nutrition-section"></div>
+        <div class="nutrition-section field measure"><div><label>Vitamins</label></div></div>
+        <div id="#=id#_vitamin_a"></div>
+        <div id="#=id#_vitamin_b1"></div>
+        <div id="#=id#_vitamin_b2"></div>
+        <div id="#=id#_vitamin_b6"></div>
+        <div id="#=id#_vitamin_b12"></div>
+        <div id="#=id#_vitamin_c"></div>
+        <div id="#=id#_vitamin_d"></div>
+        <div id="#=id#_vitamin_e"></div>
+        <div class="nutrition-section field measure"><div><label>Minerals</label></div></div>
+        <div id="#=id#_calcium"></div>
+        <div id="#=id#_iron"></div>
+        <div id="#=id#_potassium"></div>
+        <div id="#=id#_phosporus"></div>
+        <div id="#=id#_magnesium"></div>
+
+        @*</div>*@
+    </script>
+
+    <script type="text/x-kendo-template" id="dish-ingredient-template">
+        @*<div id="#=id#" class="form-group dish-ingredient">*@
+        #if(readonly) { #
+        <div id="#=id#_servings"></div>
+        <div id="#=id#_ingredient"></div>
+        # } else if(dependantControl){ #
+        <div>
+            <button id="#=id#_remove_btn" type="button" class="k-button k-button-danger" title="Remove"><i class="fa fa-remove"></i></button>
+        </div>
+        <div id="#=id#_servings"></div>
+        <div id="#=id#_ingredient"></div>
+        # } else { #
+        <div>
+            <button id="#=id#_save_btn" type="button" class="k-button k-button-primary" title="Save"><i class="fa fa-save"></i> Save</button>
+            <button id="#=id#_remove_btn" type="button" class="k-button k-button-danger" title="Remove"><i class="fa fa-remove"></i> Remove</button>
+        </div>
+
+        <div id="#=id#_servings"></div>
+        <h3 class="sectionBanner">Ingredient</h3>
+        <div id="#=id#_ingredient"></div>
+        <h3 class="sectionBanner">Nutrition</h3>
+        <div id="#=id#_nutrition"></div>
+        # } #
+        @*</div>*@
+    </script>
+
+    <script type="text/x-kendo-template" id="dish-template">
+        @*<div id="#=id#" class="form-group dish">*@
+        #if(readonly) { #
+        <div id="#=id#_name"></div>
+        <div id="#=id#_ingredients"></div>
+        # } else { #
+        <h3>Dish</h3>
+        <div>
+            <button id="#=id#_save_btn" type="button" class="k-button k-button-primary" title="Save"><i class="fa fa-save"></i> Save</button>
+            <button id="#=id#_remove_btn" type="button" class="k-button k-button-danger" title="Remove"><i class="fa fa-remove"></i> Remove</button>
+        </div>
+        <div id="#=id#_name"></div>
+        <h3 class="sectionBanner">Ingredients</h3>
+        <div>
+            <select id="#=id#_addingredient"></select>
+            <button id="#=id#_addingredient_btn" type="button" class="k-button"><i class="fa fa-plus"></i> Add Ingredient</button>
+
+        </div>
+        <div id="#=id#_ingredients"></div>
+        <h3 class="sectionBanner">Nutrition</h3>
+        <div id="#=id#_nutrition"></div>
+        # } #
+        @*</div>*@
+    </script>
+
+    <script type="text/x-kendo-template" id="dishes-template">
+        <ul>
+            <li><a href="\\#dish">Create New Dish</a></li>
+            # for(var i = 0; i < dishes.length; i++) { #
+            <li><a href="\\#dish!#=dishes[i].id#">#=dishes[i].name#</a></li>
+            # } #
+        </ul>
+    </script>
+    <script type="text/x-kendo-template" id="journal-item-template">
+        @*<div id="#=id#" class="form-group journal-item">*@
+        #if(readonly) { #
+        <div id="#=id#_name"></div>
+        <div id="#=id#_servings"></div>
+        # } else if(dependantControl){ #
+        <div>
+            <button id="#=id#_remove_btn" type="button" class="k-button k-button-danger" title="Remove"><i class="fa fa-remove"></i></button>
+        </div>
+        <div id="#=id#_name"></div>
+        <div id="#=id#_servings"></div>
+        # } else { #
+        @*<div>
+            <button id="#=id#_new_btn" type="button" class="k-button k-button-primary">New Ingredient</button>
+            <button id="#=id#_import_btn" type="button" class="k-button k-button-primary">Import Ingredient</button>
+        </div>*@
+        <div id="#=id#_name"></div>
+        <div id="#=id#_servings"></div>
+        <h3 class="sectionBanner">Ingredients</h3>
+        <div id="#=id#_ingredients"></div>
+        @*<h3 class="sectionBanner">Nutrition</h3>
+        <div id="#=id#_nutrition"></div>*@
+        # } #
+        @*</div>*@
+    </script>
+
+    <script type="text/x-kendo-template" id="journal-entry-template">
+        @*<div id="#=id#" class="form-group journal-entry">*@
+        #if(readonly) { #
+        <div id="#=id#_timestamp"></div>
+        <h3 class="sectionBanner">Dishes</h3>
+        <div id="#=id#_items"></div>
+        # } else { #
+        <h3>Journal Entry</h3>
+        <div>
+
+            <button id="#=id#_save_btn" type="button" class="k-button k-button-primary" title="Save"><i class="fa fa-save"></i> Save</button>
+            <button id="#=id#_remove_btn" type="button" class="k-button k-button-danger" title="Remove"><i class="fa fa-remove"></i> Remove</button>
+        </div>
+        <div id="#=id#_timestamp"></div>
+        <h3 class="sectionBanner">Dishes</h3>
+        <div>
+            <select id="#=id#_adddish"></select>
+            <button id="#=id#_adddish_btn" type="button" class="k-button k-button-primary"><i class="fa fa-plus"></i> Add Dish</button>
+        </div>
+        <div id="#=id#_items"></div>
+        <h3 class="sectionBanner">Nutrition</h3>
+        <div id="#=id#_nutrition"></div>
+        # } #
+        @*</div>*@
+    </script>
+    <script type="text/x-kendo-template" id="journal-entries-template">
+        <ul>
+            <li><a href="\\#entry">Create New Entry</a></li>
+            # for(var i = 0; i < entries.length; i++) { #
+            <li><a href="\\#entry!#=entries[i].id#">#=entries[i].timestamp#</a></li>
+            # } #
+        </ul>
+    </script>
+    <script type="text/x-kendo-template" id="journal-report-template">
+        @*<div id="#=id#" class="journal-report">*@
+        <div id="#=id#_daterange"></div>
+
+        <h3 class="sectionBanner">Ingredients</h3>
+        <div id="#=id#_ingredients"></div>
+        <h3 class="sectionBanner">Nutrition</h3>
+        <div id="#=id#_nutrition"></div>
+        @*</div>*@
+    </script>
+
+    <script type="text/x-kendo-template" id="ingredients-summary-item-template">
+        <div id="#=id#" class="ingredients-summary">
+            <label>#=name#</label>
+            <p>#:kendo.toString(amount, "n")# #=units#</p>
+        </div>
+    </script>
+
+
+    <!-- Application Code -->
+    @*<script src="Content/dist/FoodJournal.js"></script>*@
+    <script src="@Url.Content("~/Scripts/site.js")"></script>
+}  

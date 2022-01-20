@@ -1,0 +1,164 @@
+icon {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color:white;
+}
+
+icon.HVAC {
+    -webkit-mask: url("../img/HVAC2.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/HVAC2.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Windows {
+	-webkit-mask: url("../img/Windows.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Windows.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Roofing {
+	-webkit-mask: url("../img/Roofing.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Roofing.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Siding {
+	-webkit-mask: url("../img/Siding.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Siding.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Kitchens {
+	-webkit-mask: url("../img/Kitchens.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Kitchens.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Bathrooms {
+	-webkit-mask: url("../img/Bathrooms.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Bathrooms.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Countertops {
+	-webkit-mask: url("../img/Countertops.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Countertops.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Cabinets {
+	-webkit-mask: url("../img/Cabinets.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Cabinets.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Flooring {
+	-webkit-mask: url("../img/Flooring.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Flooring.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Doors {
+	-webkit-mask: url("../img/Doors.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Doors.svg") 50% 50%/100% no-repeat;
+}
+
+icon.Garage_Doors {
+	-webkit-mask: url("../img/Garage Doors.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/Garage Doors.svg") 50% 50%/100% no-repeat;
+}
+
+icon.human_profile {
+	-webkit-mask: url("../img/human_profile.svg") 50% 50%/100% no-repeat;
+   	mask: url("../img/human_profile.svg") 50% 50%/100% no-repeat;
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* Internet Explorer Compatibility */
+    icon {
+    	background-color:white;
+    	background-size:60px;
+    }
+
+    .tile:hover icon {
+		background-color:#f0f5f7;
+	}
+
+    icon.HVAC {
+		background-image: url("../img/HVAC.svg");
+	}
+
+	icon.Windows {
+		background-image: url("../img/Windows.svg");
+	}
+
+	icon.Roofing {
+		background-image: url("../img/Roofing.svg");
+	}
+
+	icon.Siding {
+		background-image: url("../img/Siding.svg");
+	}
+
+	icon.Kitchens {
+		background-image: url("../img/Kitchens.svg");
+	}
+
+	icon.Bathrooms {
+		background-image: url("../img/Bathrooms.svg");
+	}
+
+	icon.Countertops {
+		background-image: url("../img/Countertops.svg");
+	}
+
+	icon.Cabinets {
+		background-image: url("../img/Cabinets.svg");
+	}
+
+	icon.Flooring {
+		background-image: url("../img/Flooring.svg");
+	}
+
+	icon.Garage_Doors {
+		background-image: url("../img/Garage Doors.svg");
+	}
+}
+
+logo {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 80%;
+}
+
+logo.color {
+    background-image:url("../img/THI_Color.svg");
+}
+
+logo.color2 {
+    background-image:url("../img/THI_Color2.svg");
+}
+
+logo.white {
+    background-image:url("../img/THI_White.svg");
+}
+
+logo.icon {
+    background-image:url("../img/THI_Icon_White.svg");
+}
+
+logo.colorAlt {
+    background-image:url("../img/THIP_Color.svg");
+}
+
+logo.color2Alt {
+    background-image:url("../img/THIP_Color2.svg");
+}
+
+logo.whiteAlt {
+    background-image:url("../img/THIP_White.svg");
+}
+	

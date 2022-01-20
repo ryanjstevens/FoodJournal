@@ -1,0 +1,160 @@
+﻿
+.frm-btn {
+    text-transform: uppercase;
+    background-color: #fff;
+    color: rgb(0, 170, 255);
+    border: 1px solid rgb(0,170,255);
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgb(160, 157, 157);
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+
+    &:hover {
+        background-color: #fff;
+        color: rgb(0, 170, 255);
+    }
+
+    > i.fa {
+        margin-right: 10px;
+    }
+
+    &:hover, &:focus, &:active, &.selected {
+        color: rgb(0, 170, 255);
+        border-color: transparent;
+        border-bottom-color: rgb(0,170,255);
+        border-bottom-width: 2px;
+        margin-bottom: -1px;
+        box-shadow: 0 0 6px rgb(124, 199, 237);
+        outline: none;
+    }
+
+    &:disabled {
+        border-color: transparent;
+        box-shadow: none;
+        background: grey;
+    }
+}
+
+.nav-btn {
+    text-transform: uppercase;
+    background-color: #fff;
+    color: rgb(0, 170, 255);
+    border: none;
+    background-color: rgba(255, 255, 255, 1);
+
+    &:not(:first-child):before {
+        content: '|';
+        margin-right: 6px;
+    }
+
+    &:hover {
+        text-decoration: none !important;
+        /*background-color: #fff;
+        color: rgb(0, 170, 255);*/
+        /*-moz-box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.298039215686275);
+        -webkit-box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.298039215686275);
+        box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.298039215686275);*/
+    }
+
+    > i.fa {
+        margin: 0 10px;
+    }
+
+    &:hover, &:focus, &:active {
+        /*color: rgb(0, 170, 255);
+        border-color: transparent;
+        border-bottom-color: rgb(0,170,255);
+        border-bottom-width: 2px;
+        margin-bottom: -1px;
+        box-shadow: 0 0 6px rgb(124, 199, 237);*/
+        outline: none;
+        border: none;
+    }
+
+    &:disabled {
+        border-color: transparent;
+        box-shadow: none;
+        background: none;
+        color: grey;
+    }
+}
+
+.selection-btn {
+    /*display: block;*/
+    /*float: left;*/
+    text-align: center;
+    margin: 0 0 8px 0;
+    border: 2px solid transparent;
+    border-radius: 0px;
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.0980392156862745);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.0980392156862745);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.0980392156862745);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+
+    &.icon {
+        width: 120px;
+        height: 135px;
+        padding: 0;
+    }
+
+    > icon {
+        background-color: grey;
+        width: 60px;
+        height: 60px;
+    }
+
+    > p {
+        width: 100%;
+        text-transform: uppercase;
+        color: #636569;
+        padding: 0 2px;
+        margin: 0;
+    }
+
+    &:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+    &:hover, &.selected {
+        text-decoration: none;
+        border-width: 0px;
+        background: inherit;
+        background-color: rgba(255, 255, 255, 1);
+        box-sizing: border-box;
+        border-width: 2px;
+        border-style: solid;
+        border-bottom-color: rgba(0, 170, 255, 1);
+        /*border-left: 0px;
+        border-top: 0px;
+        border-right: 0px;*/
+        border-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        -moz-box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.298039215686275);
+        -webkit-box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.298039215686275);
+        box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.298039215686275);
+        /*font-family: 'HCo Gotham Cond SSm Book';*/
+        color: #636569;
+        text-transform: uppercase;
+        outline: none;
+    }
+
+    &:disabled {
+        border-color: transparent;
+        box-shadow: none;
+        background: grey;
+    }
+
+    @media only screen and (min-width: 376px) {
+
+        .selection-btn {
+            font-size: 16px;
+            width: 140px;
+        }
+    }
+}

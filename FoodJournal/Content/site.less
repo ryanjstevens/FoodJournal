@@ -1,0 +1,279 @@
+﻿@import "theme/icons";
+
+@import "theme/bootstrap";
+@import "theme/grid";
+@import "theme/buttons";
+@import "theme/layout";
+@import "theme/flexgroup";
+@import "theme/timeline";
+@import "theme/wizard";
+@import "theme/appointmentPicker";
+@import "editor";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.field {
+    float: left;
+    margin: 0 15px 15px 0;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input, select, textarea {
+    max-width: 280px;
+}
+
+select {
+    padding: 1px;
+    height: 28.84px;
+}
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+h3.product-group {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 26px;
+    margin-top: 0px;
+}
+
+h3.product-group a {
+    display: inline !important;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+h3.product-group a .glyphicon {
+    font-size: 1.0em;
+}
+
+
+
+.table > tbody > tr > td {
+    line-height: 2;
+}
+
+.btn.btn-fill {
+    display: inline-block;
+    width: 49%;
+    /*float: left;*/
+    margin-right: 1%;
+}
+
+
+.response {
+    float: left;
+    height: 0px;
+    display: none;
+}
+
+.notificationstatus {
+    color: #000;
+    padding: 5px 10px;
+    width: 100%;
+    background-color: #ccc;
+    height: 34px;
+}
+
+.accordion {
+    background-color: #2a328e;
+    color: #FFF;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 12px;
+    transition: 0.4s;
+    border-bottom: 1px solid #888;
+    min-height: 0; /* support: IE7 */
+}
+
+.active {
+    background-color: #ccc;
+    color: #000;
+    border-bottom: 1px solid transparent;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #FFF;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+/*.active:after {
+    content: "\2212";
+    color: #000;
+}*/
+
+/*.panel {
+    padding: 10px 15px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    border: 3px solid #ccc;
+    border-radius: 0px;
+}*/
+
+
+
+
+.title {
+    /*color: #2a328e;*/
+    color: #4c4b4b;
+    font-weight: bold;
+    /*position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);*/
+}
+
+.name {
+    color: gray;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+loader {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    color: white;
+    background-color: #4f4f4f;
+    padding: 5px;
+    border-radius: 4px;
+    margin: .2em;
+
+    > span {
+        margin-left: .2em;
+    }
+}
+
+#upload > * {
+    margin: 0 .2em .2em 0;
+}
+
+fieldset {
+    position: relative;
+
+    > .actions > * {
+        display: inline-block;
+        float: left;
+        margin-right: .2em;
+    }
+
+    @media only screen and (min-width: 1070px) {
+        > .actions {
+            position: absolute;
+            bottom: .75em;
+            right: .75em;
+        }
+    }
+}
+
+.validation-summary-errors {
+    width: 100%;
+    display: block;
+    color: red;
+}
+
+
+.nutrition-section {
+    > div {
+        background: #a5e6ff;
+    }
+}
+
+.sectionBanner {
+    display: inline-block;
+    width: 100%;
+    margin: 0 10px 10px 0;
+    border-bottom: solid 1px gray;
+}
+
+.item-add-section {
+    background: #a5e6ff;
+    padding: 5px;
+}
+
+.dish-ingredient,
+.journal-item {
+    display: inline-block;
+    border: #c4c4c5 1px solid;
+    border-radius: 4px;
+    width: 100%;
+    background: #e1dfdf;
+
+    .k-button {
+        float: right;
+        
+    }
+}
+
+.form-group {
+    padding: 5px 15px 5px 15px;
+
+    .field {
+        display: inline-block;
+        width: 100%;
+        /*        max-width: 200px;*/
+        margin: 3px 10px;
+
+        > div {
+            display: inline-block;
+            padding: 5px 15px;
+            width: 100%;
+
+            > label,
+            > div {
+                display: inline-block;
+            }
+
+            > div {
+                text-align: right;
+                float: right;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1070px) {
+    .nutrition {
+        column-count: 3;
+    }
+}

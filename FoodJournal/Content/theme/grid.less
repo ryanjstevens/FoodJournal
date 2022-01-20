@@ -1,0 +1,519 @@
+﻿
+// Screen sizes
+@screen-phone: 480px;
+@screen-tablet: 768px;
+@screen-desktop: 992px;
+@screen-lg-desktop: 1200px;
+@screen-xlg-desktop: 1600px;
+@screen-ulg-desktop: 1920px;
+
+// Display sections
+@media (max-width: @screen-phone) {
+    div.hide-under-xs {
+        display: none !important;
+    }
+}
+
+@media (max-width: @screen-tablet) {
+    div.hide-under-sm {
+        display: none !important;
+    }
+}
+
+@media (max-width: @screen-desktop) {
+    div.hide-under-md {
+        display: none !important;
+    }
+}
+
+@media (max-width: @screen-lg-desktop) {
+    div.hide-under-lg {
+        display: none !important;
+    }
+}
+
+@media (max-width: @screen-xlg-desktop) {
+    div.hide-under-xlg {
+        display: none !important;
+    }
+}
+
+@media (max-width: @screen-ulg-desktop) {
+    div.hide-under-ulg {
+        display: none !important;
+    }
+}
+
+@media (min-width: @screen-phone) {
+    div.hide-above-xs {
+        display: none !important;
+    }
+}
+
+@media (min-width: @screen-tablet) {
+    div.hide-above-sm {
+        display: none !important;
+    }
+}
+
+@media (min-width: @screen-desktop) {
+    div.hide-above-md {
+        display: none !important;
+    }
+}
+
+@media (min-width: @screen-lg-desktop) {
+    div.hide-above-lg {
+        display: none !important;
+    }
+}
+
+@media (min-width: @screen-xlg-desktop) {
+    div.hide-above-xlg {
+        display: none;
+    }
+}
+
+@media (min-width: @screen-ulg-desktop) {
+    div.hide-above-ulg {
+        display: none;
+    }
+}
+
+
+.col-xlg-1, .col-xlg-2, .col-xlg-3, .col-xlg-4, .col-xlg-5, .col-xlg-6, .col-xlg-7, .col-xlg-8, .col-xlg-9, .col-xlg-10, .col-xlg-11, .col-xlg-12,
+.col-ulg-1, .col-ulg-2, .col-ulg-3, .col-ulg-4, .col-ulg-5, .col-ulg-6, .col-ulg-7, .col-ulg-8, .col-ulg-9, .col-ulg-10, .col-ulg-11, .col-ulg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+@media (min-width: @screen-xlg-desktop) {
+    .container {
+        width: 1440px;
+    }
+
+    .col-xlg-1, .col-xlg-10, .col-xlg-11, .col-xlg-12, .col-xlg-2, .col-xlg-3, .col-xlg-4, .col-xlg-5, .col-xlg-6, .col-xlg-7, .col-xlg-8, .col-xlg-9 {
+        float: left
+    }
+
+    .col-xlg-12 {
+        width: 100%
+    }
+
+    .col-xlg-11 {
+        width: 91.66666667%
+    }
+
+    .col-xlg-10 {
+        width: 83.33333333%
+    }
+
+    .col-xlg-9 {
+        width: 75%
+    }
+
+    .col-xlg-8 {
+        width: 66.66666667%
+    }
+
+    .col-xlg-7 {
+        width: 58.33333333%
+    }
+
+    .col-xlg-6 {
+        width: 50%
+    }
+
+    .col-xlg-5 {
+        width: 41.66666667%
+    }
+
+    .col-xlg-4 {
+        width: 33.33333333%
+    }
+
+    .col-xlg-3 {
+        width: 25%
+    }
+
+    .col-xlg-2 {
+        width: 16.66666667%
+    }
+
+    .col-xlg-1 {
+        width: 8.33333333%
+    }
+
+    .col-xlg-pull-12 {
+        right: 100%
+    }
+
+    .col-xlg-pull-11 {
+        right: 91.66666667%
+    }
+
+    .col-xlg-pull-10 {
+        right: 83.33333333%
+    }
+
+    .col-xlg-pull-9 {
+        right: 75%
+    }
+
+    .col-xlg-pull-8 {
+        right: 66.66666667%
+    }
+
+    .col-xlg-pull-7 {
+        right: 58.33333333%
+    }
+
+    .col-xlg-pull-6 {
+        right: 50%
+    }
+
+    .col-xlg-pull-5 {
+        right: 41.66666667%
+    }
+
+    .col-xlg-pull-4 {
+        right: 33.33333333%
+    }
+
+    .col-xlg-pull-3 {
+        right: 25%
+    }
+
+    .col-xlg-pull-2 {
+        right: 16.66666667%
+    }
+
+    .col-xlg-pull-1 {
+        right: 8.33333333%
+    }
+
+    .col-xlg-pull-0 {
+        right: auto
+    }
+
+    .col-xlg-push-12 {
+        left: 100%
+    }
+
+    .col-xlg-push-11 {
+        left: 91.66666667%
+    }
+
+    .col-xlg-push-10 {
+        left: 83.33333333%
+    }
+
+    .col-xlg-push-9 {
+        left: 75%
+    }
+
+    .col-xlg-push-8 {
+        left: 66.66666667%
+    }
+
+    .col-xlg-push-7 {
+        left: 58.33333333%
+    }
+
+    .col-xlg-push-6 {
+        left: 50%
+    }
+
+    .col-xlg-push-5 {
+        left: 41.66666667%
+    }
+
+    .col-xlg-push-4 {
+        left: 33.33333333%
+    }
+
+    .col-xlg-push-3 {
+        left: 25%
+    }
+
+    .col-xlg-push-2 {
+        left: 16.66666667%
+    }
+
+    .col-xlg-push-1 {
+        left: 8.33333333%
+    }
+
+    .col-xlg-push-0 {
+        left: auto
+    }
+
+    .col-xlg-offset-12 {
+        margin-left: 100%
+    }
+
+    .col-xlg-offset-11 {
+        margin-left: 91.66666667%
+    }
+
+    .col-xlg-offset-10 {
+        margin-left: 83.33333333%
+    }
+
+    .col-xlg-offset-9 {
+        margin-left: 75%
+    }
+
+    .col-xlg-offset-8 {
+        margin-left: 66.66666667%
+    }
+
+    .col-xlg-offset-7 {
+        margin-left: 58.33333333%
+    }
+
+    .col-xlg-offset-6 {
+        margin-left: 50%
+    }
+
+    .col-xlg-offset-5 {
+        margin-left: 41.66666667%
+    }
+
+    .col-xlg-offset-4 {
+        margin-left: 33.33333333%
+    }
+
+    .col-xlg-offset-3 {
+        margin-left: 25%
+    }
+
+    .col-xlg-offset-2 {
+        margin-left: 16.66666667%
+    }
+
+    .col-xlg-offset-1 {
+        margin-left: 8.33333333%
+    }
+
+    .col-xlg-offset-0 {
+        margin-left: 0
+    }
+}
+
+@media (min-width: @screen-ulg-desktop) {
+    .container {
+        width: 1800px;
+    }
+
+    .col-ulg-1, .col-ulg-10, .col-ulg-11, .col-ulg-12, .col-ulg-2, .col-ulg-3, .col-ulg-4, .col-ulg-5, .col-ulg-6, .col-ulg-7, .col-ulg-8, .col-ulg-9 {
+        float: left
+    }
+
+    .col-ulg-12 {
+        width: 100%
+    }
+
+    .col-ulg-11 {
+        width: 91.66666667%
+    }
+
+    .col-ulg-10 {
+        width: 83.33333333%
+    }
+
+    .col-ulg-9 {
+        width: 75%
+    }
+
+    .col-ulg-8 {
+        width: 66.66666667%
+    }
+
+    .col-ulg-7 {
+        width: 58.33333333%
+    }
+
+    .col-ulg-6 {
+        width: 50%
+    }
+
+    .col-ulg-5 {
+        width: 41.66666667%
+    }
+
+    .col-ulg-4 {
+        width: 33.33333333%
+    }
+
+    .col-ulg-3 {
+        width: 25%
+    }
+
+    .col-ulg-2 {
+        width: 16.66666667%
+    }
+
+    .col-ulg-1 {
+        width: 8.33333333%
+    }
+
+    .col-ulg-pull-12 {
+        right: 100%
+    }
+
+    .col-ulg-pull-11 {
+        right: 91.66666667%
+    }
+
+    .col-ulg-pull-10 {
+        right: 83.33333333%
+    }
+
+    .col-ulg-pull-9 {
+        right: 75%
+    }
+
+    .col-ulg-pull-8 {
+        right: 66.66666667%
+    }
+
+    .col-ulg-pull-7 {
+        right: 58.33333333%
+    }
+
+    .col-ulg-pull-6 {
+        right: 50%
+    }
+
+    .col-ulg-pull-5 {
+        right: 41.66666667%
+    }
+
+    .col-ulg-pull-4 {
+        right: 33.33333333%
+    }
+
+    .col-ulg-pull-3 {
+        right: 25%
+    }
+
+    .col-ulg-pull-2 {
+        right: 16.66666667%
+    }
+
+    .col-ulg-pull-1 {
+        right: 8.33333333%
+    }
+
+    .col-ulg-pull-0 {
+        right: auto
+    }
+
+    .col-ulg-push-12 {
+        left: 100%
+    }
+
+    .col-ulg-push-11 {
+        left: 91.66666667%
+    }
+
+    .col-ulg-push-10 {
+        left: 83.33333333%
+    }
+
+    .col-ulg-push-9 {
+        left: 75%
+    }
+
+    .col-ulg-push-8 {
+        left: 66.66666667%
+    }
+
+    .col-ulg-push-7 {
+        left: 58.33333333%
+    }
+
+    .col-ulg-push-6 {
+        left: 50%
+    }
+
+    .col-ulg-push-5 {
+        left: 41.66666667%
+    }
+
+    .col-ulg-push-4 {
+        left: 33.33333333%
+    }
+
+    .col-ulg-push-3 {
+        left: 25%
+    }
+
+    .col-ulg-push-2 {
+        left: 16.66666667%
+    }
+
+    .col-ulg-push-1 {
+        left: 8.33333333%
+    }
+
+    .col-ulg-push-0 {
+        left: auto
+    }
+
+    .col-ulg-offset-12 {
+        margin-left: 100%
+    }
+
+    .col-ulg-offset-11 {
+        margin-left: 91.66666667%
+    }
+
+    .col-ulg-offset-10 {
+        margin-left: 83.33333333%
+    }
+
+    .col-ulg-offset-9 {
+        margin-left: 75%
+    }
+
+    .col-ulg-offset-8 {
+        margin-left: 66.66666667%
+    }
+
+    .col-ulg-offset-7 {
+        margin-left: 58.33333333%
+    }
+
+    .col-ulg-offset-6 {
+        margin-left: 50%
+    }
+
+    .col-ulg-offset-5 {
+        margin-left: 41.66666667%
+    }
+
+    .col-ulg-offset-4 {
+        margin-left: 33.33333333%
+    }
+
+    .col-ulg-offset-3 {
+        margin-left: 25%
+    }
+
+    .col-ulg-offset-2 {
+        margin-left: 16.66666667%
+    }
+
+    .col-ulg-offset-1 {
+        margin-left: 8.33333333%
+    }
+
+    .col-ulg-offset-0 {
+        margin-left: 0
+    }
+}

@@ -1,0 +1,111 @@
+﻿@import (reference) "./grid.less";
+
+
+.transform-appointmentpicker {
+    .transform-wizard {
+        display: inline-block;
+
+        .transform-wizard-navigation {
+            top: unset;
+            bottom: 0;
+            margin-bottom: 10px;
+            width: 50%;
+
+            &.left {
+                left: 0;
+            }
+
+            &.right {
+                right: 0;
+            }
+
+            .nav-btn {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    .transform-appointmentpicker-columns {
+        padding: 5px 0;
+        overflow-y: auto;
+    }
+
+    .transform-appointmentpicker-column {
+        padding: 0;
+        width: 100%;
+        float: left;
+        position: relative;
+        margin: 10px 0;
+
+        .transform-appointmentpicker-slots-container {
+            display: inline-block;
+            padding: 0 15px;
+        }
+
+        &:not(:first-of-type) {
+            border-top: gray 1px solid;
+        }
+    }
+
+    .transform-appointmentpicker-slots > button {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    @media( min-width: @screen-tablet) {
+        .transform-appointmentpicker-columns {
+            height: 450px;
+            overflow-y: auto;
+        }
+    }
+
+
+
+    @media( min-width: @screen-lg-desktop) {
+
+        .transform-wizard {
+            .transform-wizard-navigation {
+                width: 50px;
+                top: 50%;
+                bottom: unset;
+
+                .nav-btn {
+
+                    &.left {
+                        left: 0;
+                    }
+
+                    &.right {
+                        right: 50px;
+                    }
+                }
+            }
+        }
+
+        .transform-appointmentpicker-columns {
+            padding: 0 50px;
+        }
+
+
+        .transform-appointmentpicker-column {
+            width: 20%;
+            margin: 0;
+
+            &:not(:first-of-type) {
+                border: none;
+
+                .transform-appointmentpicker-slots-container {
+                    border-left: gray 1px solid;
+                }
+            }
+        }
+    }
+
+    @media( min-width: @screen-xlg-desktop) {
+
+        .transform-appointmentpicker-slots > button {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES2015",
+        "module": "None",
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "removeComments": false,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": false
+    },
+  "exclude": [
+    "node_modules",
+    "wwwroot",
+    "Content/kendo"
+  ]
+}
